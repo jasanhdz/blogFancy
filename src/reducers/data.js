@@ -1,12 +1,14 @@
 const initialState = {
-  data: {}
+  entities: [],
 }
 
-function data(state, action) {
+function data(state = initialState, action) {
   switch(action.type) {
     case 'CARGAR_USUARIOS':
-      return {...state, data: action.payload.data};
+      return {entities: action.payload.data};
     default:
       return state;
   }
 }
+
+export default data;

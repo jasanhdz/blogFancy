@@ -7,13 +7,9 @@ const Table = props => {
         <table className="Table">
           <thead>
             <tr>
-            {
-              props.columns.map((key) => (
-                <th>
-                  {key}
-                </th>
-              )) 
-            }
+              <th>Name</th>
+              <th>Email</th>
+              <th>Website</th>
             </tr>
           </thead>
           <tbody>
