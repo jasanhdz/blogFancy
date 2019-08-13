@@ -1,0 +1,14 @@
+.Margen {
+  margin: 100px;
+}
+
+.Table {
+  width: 100%;
+  text-align: left;
+}
+
+.Table tr:nth-of-type(odd) {
+  background-color: gray;
+}
+
+

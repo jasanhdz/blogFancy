@@ -1,60 +1,50 @@
 import React from 'react';
-
+import Table  from '../components/table.jsx';
+import { connect, bindActionCreators } from 'react-redux';
+import * as actions from '../../../actions/index'
 class Usuarios extends React.Component {
   constructor() {
     super();
     this.state = {
       usuarios: [
         {
-          nombre: 'Fernando Bermudez',
-          correo: 'fernando@hotmail.com',
+          name: 'Fernando Bermudez',
+          email: 'fernando@hotmail.com',
           website: 'fernando.com.mx'
         },
         {
-          nombre: 'Roberto Bermudez',
-          correo: 'roberto@hotmail.com',
+          name: 'Roberto Bermudez',
+          email: 'roberto@hotmail.com',
           website: 'roberto.com.mx'
         },
         {
-          nombre: 'Victoria Bermudez',
-          correo: 'victoria@hotmail.com',
+          name: 'Victoria Bermudez',
+          email: 'victoria@hotmail.com',
           website: 'victoria.com.mx'
         }
+      ],
+      columns: [
+        'Name',
+        'Email',
+        'Website'
       ]
     }
   }
+  componentDidMount() {
+    this.props.actions.load();
+  }
   render() {
-    return (
-      <table>
-        <tread>
-          <tr>
-            <th>
-              Nombre
-            </th>
-            <th>
-              Email
-            </th>
-            <th>
-              Website
-            </th>
-          </tr>
-        </tread>
-        <tebody>
-          <tr>
-            <td>
-              {this.state.usuarios[0].nombre}
-            </td>
-            <td>
-              {this.state.usuarios[0].correo}
-            </td>
-            <td>
-              {this.state.usuarios[0].email}
-            </td>
-          </tr>
-        </tebody>  
-      </table>
-    )
+    return <Table 
+      users={this.state.usuarios}
+      columns={this.state.columns}  
+    />
   }
 }
 
-export default Usuarios;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Usuarios);
