@@ -1,60 +1,42 @@
-import React from 'react';
+// import React from 'react';
+// import Table  from '../components/table.jsx';
 
-class Usuarios extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      usuarios: [
-        {
-          nombre: 'Fernando Bermudez',
-          correo: 'fernando@hotmail.com',
-          website: 'fernando.com.mx'
-        },
-        {
-          nombre: 'Roberto Bermudez',
-          correo: 'roberto@hotmail.com',
-          website: 'roberto.com.mx'
-        },
-        {
-          nombre: 'Victoria Bermudez',
-          correo: 'victoria@hotmail.com',
-          website: 'victoria.com.mx'
-        }
-      ]
-    }
-  }
-  render() {
-    return (
-      <table>
-        <tread>
-          <tr>
-            <th>
-              Nombre
-            </th>
-            <th>
-              Email
-            </th>
-            <th>
-              Website
-            </th>
-          </tr>
-        </tread>
-        <tebody>
-          <tr>
-            <td>
-              {this.state.usuarios[0].nombre}
-            </td>
-            <td>
-              {this.state.usuarios[0].correo}
-            </td>
-            <td>
-              {this.state.usuarios[0].email}
-            </td>
-          </tr>
-        </tebody>  
-      </table>
-    )
-  }
-}
+// const Usuarios = props => {
+//   return <Table 
+//             users={props.users}  
+//           />
+// }
 
-export default Usuarios;
+// // class Usuarios extends React.Component {
+//   // constructor() {
+//   //   super();
+//   //   this.state = {
+//   //     usuarios: [
+//   //       {
+//   //         name: 'Fernando Bermudez',
+//   //         email: 'fernando@hotmail.com',
+//   //         website: 'fernando.com.mx'
+//   //       },
+//   //       {
+//   //         name: 'Roberto Bermudez',
+//   //         email: 'roberto@hotmail.com',
+//   //         website: 'roberto.com.mx'
+//   //       },
+//   //       {
+//   //         name: 'Victoria Bermudez',
+//   //         email: 'victoria@hotmail.com',
+//   //         website: 'victoria.com.mx'
+//   //       }
+//   //     ],
+//   //     columns: [
+//   //       'Name',
+//   //       'Email',
+//   //       'Website'
+//   //     ]
+//   //   }
+//   // }
+    
+        
+
+
+// export default Usuarios;
